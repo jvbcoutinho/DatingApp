@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = 'http://localhost:5000/api/auth/';
+  private baseUrl = 'http://localhost:5000/api/auth/';
 
   constructor(private http: HttpClient) { }
 
@@ -20,5 +20,9 @@ export class AuthService {
           }
         })
       )
+  }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'register', model);
   }
 }
