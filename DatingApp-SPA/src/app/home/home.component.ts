@@ -30,4 +30,8 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  cancelRegisterMode(){
+    this.registerMode = false;
+  }
+
 }
