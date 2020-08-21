@@ -7,7 +7,7 @@ namespace DatingApp.API.Helpers
         public static void AddAplicationError(this HttpResponse response, string message)
         {
             response.Headers.Add("Aplication-Error", message);
-            response.Headers.Add("Acces-Control-Expose-Headers", "Application-Error");
+            response.Headers.Add("Access-Control-Expose-Headers", "Application-Error");
             response.Headers.Add("Access-Control-Allow-Origin", "*");
         }
     }
